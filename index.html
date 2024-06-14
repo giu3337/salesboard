@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salesboard 🔔</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="theme-switch-container">
+            <button id="theme-switch" class="top-button">🌙</button> <!-- Switch Button -->
+        </div>
+        <main>
+            <!-- Top Container -->
+            <header class="top-section-container">
+                <h1>Salesboard 🔔</h1>
+                <img 
+                    src="./images/giu.jpg" 
+                    alt="Giuseppe Smiling"
+                    class="top-section-image"
+                >
+                <div class="buttons-top-container">
+                    
+
+                    <button 
+                        class="top-button"
+                        id="top-button-star"
+                        >⭐
+                    </button>
+
+                    <button 
+                        class="top-button reset"
+                        id="reset-button"
+                        >Reset
+                    </button>
+
+
+                    <button 
+                        class="top-button"
+                        id="top-button-fire"
+                        >🔥
+                    </button>
+
+                </div>
+            </header>
+
+            <!-- Middle Container -->
+            <section class="middle-section-container">
+                <article class="middle-section-item-container">
+                    <p 
+                        id="live-sales" 
+                        class="live-sales">
+                        <!-- Live Sales from JS -->
+                    </p>
+
+                    <div class="sales-history purple-background">
+                        <span id="sales-history-id">
+                            <!-- Sales History from JS -->
+                        </span>
+                    </div>
+                </article>
+
+                <article class="middle-section-item-container">
+                    <p 
+                        id="live-achievements" 
+                        class="live-achievements">
+                        <!-- Live Achievemnts from JS -->
+                    </p>
+
+                    <div class="achievement-history purple-background">
+                        <span id="achievement-history-id">
+                            <!-- Achievement History from JS-->
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Bottom Container -->
+            <section class="bottom-section-container">
+                <article class="bottom-section-item-container">
+                    <p class="total-revenue">Total Revenue</p>
+                    <div class="total-revenue-values purple-background">
+                        <span id="total-revenue-id">
+                            <!-- Total Revenue from JS -->
+                        </span>
+                    </div>
+                </article>
+
+                <article class="bottom-section-item-container">
+                    <p class="total-commission">Total Commission</p>
+                    <div class="total-commission-values purple-background">
+                        <span id="total-commission-id">
+                            <!-- Total Commission from JS -->
+                        </span>
+                    </div>
+
+                    
+                </article>
+            </section>
+        </main>
+
+        <script src="index.js"></script>
+    </body>
+</html>

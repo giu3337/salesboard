@@ -1,0 +1,326 @@
+:root {
+    --black: #201A23;
+    --white: #FBFBFB;
+    --dark: #44354A;
+    --color: #9E4770;
+    --background-color: #242424;
+    --font-family: 'Poppins', sans-serif;
+    --font-size-large: 3rem;
+    --font-size-medium: 2.2rem;
+    --font-size-small: 1.8rem;
+    --border-radius: 25px;
+    --light-background-color: #F9F9F9; 
+    --light-text-color: #201A23; 
+    --light-button-background: #E0E0E0; 
+    --light-button-hover: #C0C0C0; 
+}
+
+/* Light mode variables */
+:root.light-mode {
+    --black: #FBFBFB;
+    --white: #201A23;
+    --dark: #E0E0E0;
+    --color: #9E4770;
+    --background-color: #282828; 
+    --light-background-color: #FFFFFF; 
+    --light-text-color: #201A23; 
+    --light-button-background: #E0E0E0; 
+    --light-button-hover: #C0C0C0; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family); 
+    background-color: var(--background-color);
+}
+
+main {
+    align-items: center;
+    width: 70%;
+    height: auto;
+    background: var(--black);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+/* Light mode styles for main */
+:root.light-mode main {
+    background: var(--light-background-color);
+}
+
+.theme-switch-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+/* Top Section Container */
+.top-section-container, .middle-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode styles for h1 */
+:root.light-mode h1 {
+    color: var(--light-text-color);
+}
+
+.top-section-container img {
+    width: 170px;  
+    height: 170px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 10px solid var(--dark);
+    margin-bottom: 2.8rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Light mode styles for image border */
+:root.light-mode .top-section-container img {
+    border-color: var(--light-button-background);
+}
+
+.top-section-container img:hover,
+.top-section-container img:focus {
+    border-color: var(--color);
+    transform: scale(1.05);
+}
+
+.buttons-top-container {
+    display: flex;
+    gap: 1em;
+}
+
+main .top-button {
+    background-color: var(--color);
+    color: var(--white);
+    text-align: center;
+    font-size: var(--font-size-medium);
+    padding: 0.3em 1.8em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+main .top-button:hover {
+    background-color: #7E3A60; 
+    transform: scale(1.05);
+}
+
+/* Light mode styles for buttons */
+:root.light-mode .top-button {
+    background-color: var(--light-button-background);
+    color: var(--light-text-color);
+}
+
+:root.light-mode .top-button:hover {
+    background-color: var(--light-button-hover);
+}
+
+.buttons-top-container #reset-buttons {
+    padding: 0.4em 1.8em;
+}
+
+/* Middle Container */
+.middle-section-item-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.middle-section-item-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.live-sales, .live-achievements, .total-revenue, .total-commission {
+    color: var(--white);
+    text-align: center;
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Light mode styles for text */
+:root.light-mode .live-sales,
+:root.light-mode .live-achievements,
+:root.light-mode .total-revenue,
+:root.light-mode .total-commission {
+    color: var(--light-text-color);
+}
+
+.sales-history span, .achievement-history span {
+    overflow: hidden;
+}
+
+.purple-background {
+    background-color: var(--dark);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.purple-background:hover {
+    background-color: #5E3A55; /* Slightly lighter color on hover */
+}
+
+/* Light mode styles for purple background */
+:root.light-mode .purple-background {
+    background-color: var(--light-button-background);
+}
+
+.sales-history, .achievement-history {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode styles for sales and achievement history text */
+:root.light-mode .sales-history,
+:root.light-mode .achievement-history {
+    color: var(--light-text-color);
+}
+
+.sales-history span, .achievement-history span {
+    margin-left: 0.5em;
+}
+
+/* Bottom Container */
+.bottom-section-container {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.bottom-section-item-container {
+    width: 39%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bottom-section-item-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.total-revenue-values, .total-commission-values {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Light mode styles for values */
+:root.light-mode .total-revenue-values,
+:root.light-mode .total-commission-values {
+    color: var(--light-text-color);
+}
+
+.total-revenue-values span, .total-commission-values span {
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .top-section-container img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .top-button {
+        font-size: 1.8rem;
+        padding: 0.3em 1.5em;
+    }
+
+    .bottom-section-item-container {
+        width: 39%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .bottom-section-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .buttons-top-container {
+        flex-direction: column;
+    }
+
+    .bottom-section-item-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .live-sales, .live-achievements, .total-revenue, .total-commission {
+        font-size: 1.5rem;
+    }
+
+    .top-section-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .top-button {
+        font-size: 1.5rem;
+        padding: 0.3em 1.2em;
+    }
+    }
